@@ -111,6 +111,7 @@ module.exports = function LDAPService() {
 				}
 				const client = ldap.createClient({
 					url: config.url,
+					reconnect: true
 				});
 
 				client.bind(username, password, (err) => {
